@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-deviceadmin",
+  "version": "1.0.0",
+  "description": "Device administration plugin for cordova/phonegap ",
+  "cordova": {
+    "id": "cordova-plugin-deviceadmin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meso-unimpressed/cordova-plugin-deviceadmin.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meso-unimpressed/cordova-plugin-deviceadmin/issues"
+  },
+  "homepage": "https://github.com/meso-unimpressed/cordova-plugin-deviceadmin#readme"
+}
