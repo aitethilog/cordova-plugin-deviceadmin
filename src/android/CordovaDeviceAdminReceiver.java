@@ -12,7 +12,7 @@ public class CordovaDeviceAdminReceiver extends android.app.admin.DeviceAdminRec
     public void onEnabled(Context context, Intent intent) {
 		DevicePolicyManager mDPM = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
 		mDPM.clearDeviceOwnerApp(intent.getPackage());
-		Log.i("crotte 2", "crotte 2");
+		Log.i("crotte 1", "crotte 1");
         // Common.showToast(context, "[Device Admin enabled]");
         // Common.becomeHomeActivity(context);
     }
@@ -30,11 +30,17 @@ public class CordovaDeviceAdminReceiver extends android.app.admin.DeviceAdminRec
     @Override
     public void onLockTaskModeEntering(Context context, Intent intent,
             String pkg) {
+		DevicePolicyManager mDPM = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
+		mDPM.clearDeviceOwnerApp(intent.getPackage());
+		Log.i("crotte 2", "crotte 2");
         // Common.showToast(context, "[Kiosk Mode enabled]");
     }
 
     @Override
     public void onLockTaskModeExiting(Context context, Intent intent) {
+		DevicePolicyManager mDPM = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
+		mDPM.clearDeviceOwnerApp(intent.getPackage());
+		Log.i("crotte 3", "crotte 3");
         // Common.showToast(context, "[Kiosk Mode disabled]");
     }
 }
