@@ -8,8 +8,8 @@ import android.widget.Toast;
 public class CordovaDeviceAdminReceiver extends android.app.admin.DeviceAdminReceiver {
     @Override
     public void onEnabled(Context context, Intent intent) {
-        Common.showToast(context, "[Device Admin enabled]");
-        Common.becomeHomeActivity(context);
+        // Common.showToast(context, "[Device Admin enabled]");
+        // Common.becomeHomeActivity(context);
     }
 
     @Override
@@ -19,17 +19,17 @@ public class CordovaDeviceAdminReceiver extends android.app.admin.DeviceAdminRec
 
     @Override
     public void onDisabled(Context context, Intent intent) {
-        Common.showToast(context, "[Device Admin disabled]");
+        // Common.showToast(context, "[Device Admin disabled]");
     }
 
     @Override
     public void onLockTaskModeEntering(Context context, Intent intent,
             String pkg) {
-        Common.showToast(context, "[Kiosk Mode enabled]");
+        // Common.showToast(context, "[Kiosk Mode enabled]");
     }
 
     @Override
     public void onLockTaskModeExiting(Context context, Intent intent) {
-        Common.showToast(context, "[Kiosk Mode disabled]");
+        // Common.showToast(context, "[Kiosk Mode disabled]");
     }
 }
