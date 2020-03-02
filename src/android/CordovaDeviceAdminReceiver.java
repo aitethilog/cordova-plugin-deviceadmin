@@ -6,31 +6,30 @@ import android.content.Intent;
 import android.widget.Toast;
 
 public class CordovaDeviceAdminReceiver extends android.app.admin.DeviceAdminReceiver {
-
-//    void showToast(Context context, String msg) {
-//        String status = context.getString(R.string.admin_receiver_status, msg);
-//        Toast.makeText(context, status, Toast.LENGTH_SHORT).show();
-//    }
-
     @Override
     public void onEnabled(Context context, Intent intent) {
-//        showToast(context, context.getString(R.string.admin_receiver_status_enabled));
+        Common.showToast(context, "[Device Admin enabled]");
+        Common.becomeHomeActivity(context);
     }
 
     @Override
     public CharSequence onDisableRequested(Context context, Intent intent) {
-//        return context.getString(R.string.admin_receiver_status_disable_warning);
-        return "device admin disabled";
+        return "Warning: Device Admin is going to be disabled.";
     }
 
     @Override
     public void onDisabled(Context context, Intent intent) {
-//        showToast(context, context.getString(R.string.admin_receiver_status_disabled));
+        Common.showToast(context, "[Device Admin disabled]");
     }
 
     @Override
-    public void onPasswordChanged(Context context, Intent intent) {
-//        showToast(context, context.getString(R.string.admin_receiver_status_pw_changed));
+    public void onLockTaskModeEntering(Context context, Intent intent,
+            String pkg) {
+        Common.showToast(context, "[Kiosk Mode enabled]");
     }
 
+    @Override
+    public void onLockTaskModeExiting(Context context, Intent intent) {
+        Common.showToast(context, "[Kiosk Mode disabled]");
+    }
 }
