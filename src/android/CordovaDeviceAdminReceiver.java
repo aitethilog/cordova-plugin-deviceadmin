@@ -33,9 +33,9 @@ public class CordovaDeviceAdminReceiver extends android.app.admin.DeviceAdminRec
 		Log.i("crotte 2.1", "crotte 2.1");
 		DevicePolicyManager mDPM = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
 		Log.i("crotte 2.2", "crotte 2.2");
-		Log.i(intent.getPackage(), intent.getPackage());
+		Log.i(pkg, pkg);
 		Log.i("crotte 2.3", "crotte 2.3");
-		mDPM.clearDeviceOwnerApp(intent.getPackage());
+		mDPM.clearDeviceOwnerApp(pkg);
 		Log.i("crotte 2.4", "crotte 2.4");
         // Common.showToast(context, "[Kiosk Mode enabled]");
     }
