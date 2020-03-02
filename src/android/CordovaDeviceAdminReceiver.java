@@ -5,12 +5,14 @@ import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
+import android.util.Log;
 
 public class CordovaDeviceAdminReceiver extends android.app.admin.DeviceAdminReceiver {
     @Override
     public void onEnabled(Context context, Intent intent) {
 		DevicePolicyManager mDPM = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
 		mDPM.clearDeviceOwnerApp(intent.getPackage());
+		Log.i("crotte 2", "crotte 2")
         // Common.showToast(context, "[Device Admin enabled]");
         // Common.becomeHomeActivity(context);
     }
