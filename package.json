@@ -1,16 +1,16 @@
 {
-  "name": "cordova-plugin-deviceadmin",
+  "name": "cordova-plugin-deviceadmin-cc",
   "version": "1.0.0",
   "description": "Device administration plugin for cordova/phonegap ",
   "cordova": {
-    "id": "cordova-plugin-deviceadmin",
+    "id": "cordova-plugin-deviceadmin-cc",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aitethilog/cordova-plugin-deviceadmin.git"
+    "url": "git+https://github.com/aitethilog/cordova-plugin-deviceadmin-cc.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aitethilog/cordova-plugin-deviceadmin/issues"
+    "url": "https://github.com/aitethilog/cordova-plugin-deviceadmin-cc/issues"
   },
-  "homepage": "https://github.com/aitethilog/cordova-plugin-deviceadmin#readme"
+  "homepage": "https://github.com/aitethilog/cordova-plugin-deviceadmin-cc#readme"
 }
